@@ -11,15 +11,19 @@
   "exports": {
     ".": "./src/index.js"
   },
+  "bin": {
+    "vybe": "./src/index.js"
+  },
   "files": [
-    "src"
+    "src",
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
-    "lint": "echo 1",
-    "test": "vitest run"
+    "lint": "echo 1"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
