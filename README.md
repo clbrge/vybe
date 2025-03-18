@@ -13,7 +13,7 @@ I need help creating a minimal code assistant in one monolithic Nodejs script th
     4. Include a specific post-prompt instructions to the LLM that when suggesting file changes, it must:
        - Output COMPLETE file contents (not just the changed parts)
        - Format each file replacement in a consistent, parseable pattern (markdown code blocks with the filename as a level 2 heading)
-    5. Use the Anthropic Claude API (model claude-3-7-sonnet}) to generate responses based on the code and user question
+    5. Use the Anthropic Claude API (model claude-3-7-sonnet) to generate responses based on the code and user question
     6. Parse the LLM's answer to detect new file versions by looking for specific patterns in the markdown format
     7. When one or more new file versions are detected save the updated version (but copy the original with the suffix .orig)
     8. Implement minimal error handling for file operations, API calls, and user input
