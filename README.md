@@ -8,22 +8,26 @@ Vybe is a code assistant bootstrapped from a single prompt. The main script (`sr
 I need help creating a minimal code assistant in one monolithic Nodejs script that can analyze source files and answer questions about them. The assistant should:
 
     1. Read one or more files provided as command-line arguments
-    2. Create a preprompt with the file contents formatted in proper markdown code blocks to preserve syntax, with each file path clearly labeled as a level 2 heading before its>
+    2. Create a preprompt with the file contents formatted in proper markdown code blocks to preserve syntax, with each file path clearly labeled as a level 2 heading before its content
     3. Allow the user to ask a question about the code via the terminal
     4. Include a specific post-prompt instructions to the LLM that when suggesting file changes, it must:
        - Output COMPLETE file contents (not just the changed parts)
-       - Format each file replacement in a consistent, parseable pattern (markdown code blocks with the filename as a level 2 heading)
-    5. Use the Anthropic Claude API (model claude-3-7-sonnet) to generate responses based on the code and user question
-    6. Parse the LLM's answer to detect new file versions by looking for specific patterns in the markdown format
+       - Format each file replacement in a consistent, parseable pattern (Markdown code blocks with the filename as a level 2 heading)
+    5. Use the Anthropic Claude API (model claude-3-7-sonnet-latest) to generate responses based on the code and user question
+    6. Parse the LLM's answer to detect new file versions by looking for specific patterns in the Markdown format
     7. When one or more new file versions are detected save the updated version (but copy the original with the suffix .orig)
     8. Implement minimal error handling for file operations, API calls, and user input
 
 Please provide a complete implementation using ES modules with:
     - A simple terminal-based interface with clear user prompts
     - Environment variable configuration ANTHROPIC_API_KEY for the API key
-    - No external dependencies besides dotenv and the Anthropic SDK
+    - No external dependencies besides dotenv and the Anthropic SDK (@anthropic-ai/sdk)
 Ensure the code follows modern JavaScript practices including async/await for asynchronous operations and proper command-line argument parsing.
 ```
+You can read the article that 
+
+https://fluidpattern.substack.com/p/make-your-own-ai-coding-assistant
+
 
 ## What is Vibe Coding?
 
@@ -64,6 +68,10 @@ The initial version of Vybe can:
 ## Future Development
 
 True to our vibe coding philosophy, all future improvements to Vybe will be made using Vybe itself. This creates a fascinating development cycle where the tool evolves through its own capabilities.
+    
+## Learn More
+    
+ Want to dive deeper into the concept of vibe coding and see how Vybe was built? Check out my article, "[Make Your Own AI Coding Assistant In Less Than 5 minutes](https://fluidpattern.substack.com/p/make-your-own-ai-coding-assistant)," which details the bootstrapping process, the philosophy behind this approach, and a step-by-step guide to creating your own AI coding assistant.
 
 ## License
 

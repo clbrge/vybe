@@ -6,6 +6,7 @@
     "name": "Christophe Le Bars",
     "email": "<clb@toort.net>"
   },
+  "description": "Vybe is a code assistant bootstrapped from a single prompt.",
   "type": "module",
   "repository": "clbrge/vybe",
   "main": "./src/index.js",
